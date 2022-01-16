@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>reservationList</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header> Mes Reservations </ion-list-header>
+
+    <div *ngFor="let reservation of reservations">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../assets/img/{{reservation.ville.photo}}" />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{reservation.ville.name}}</h2>
+          <h3>
+            {{reservation.dateDebutString}} to {{reservation.dateFinString}}
+          </h3>
+        </ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

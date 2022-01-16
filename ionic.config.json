@@ -1,0 +1,7 @@
+{
+  "name": "my-morroco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

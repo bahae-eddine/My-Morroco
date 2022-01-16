@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ville.name}}</ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home" color="light"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ville.name}}</ion-card-title>
+      <ion-card-subtitle>{{ville.nickname}}</ion-card-subtitle>
+      <img src="../../assets/img/{{ville.photo}}" alt="morroco" srcset="">
+    </ion-card-header>
+
+    <ion-card-content>
+     {{ville.description}}
+    </ion-card-content>
+
+    <section>
+      <ion-button expand="block" routerLink="/reserver/{{ville.id}}">Réserver</ion-button>
+    </section>
+    
+  </ion-card>
+
+
+</ion-content>
+

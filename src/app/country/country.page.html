@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>country</ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home" color="light"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list *ngFor="let ville of villes">
+  <ion-card>
+    <ion-item id="{{ville.id}}" routerLink="/cities/{{ville.id}}" class="ion-activated">
+      <img src="../../assets/img/{{ville.photo}}" style="border-radius: 50px; width: 50px;height: 50px; margin: 20px;" alt="" srcset="">
+      <ion-label>{{ville.name}}</ion-label>
+    </ion-item>
+  </ion-card>
+  
+
+</ion-list>
+
+
+</ion-content>

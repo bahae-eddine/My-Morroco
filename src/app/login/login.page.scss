@@ -1,0 +1,12 @@
+.page__title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.page__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

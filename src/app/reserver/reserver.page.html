@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reserver</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form style="margin: 50px;">
+    <ion-item lines="full">
+      <ion-label position="floating">Date Debut</ion-label>
+      <ion-datetime locale="fr-FR" name="dateDebut" max="2023-01-01" min="{{today}}" #dateDebut required></ion-datetime>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Date Fin</ion-label>
+      <ion-datetime locale="fr-FR" name="dateFin" max="2023-01-01" min="{{today}}" #dateFin required></ion-datetime>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="reserver(dateDebut, dateFin)" color="danger" expand="block">Reserver</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

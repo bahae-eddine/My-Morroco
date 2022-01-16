@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Moroccan Trip </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Welcome {{displayName}} To Morocco</ion-card-title>
+      <img src="../../assets/img/morroco.jpg" alt="morroco" srcset="" />
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile, and
+      climb a mountain or spend a week in the woods. Wash your spirit clean.
+      Keep close to Nature's heart... and break clear away, once in awhile, and
+      climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+
+    <section>
+      <ion-button expand="block" routerLink="/country">Visiter</ion-button>
+    </section>
+    <section>
+      <ion-button color="success" routerLink="/reservation-list" expand="block"
+        >Voir Mes Reservations</ion-button
+      >
+    </section>
+  </ion-card>
+</ion-content>
