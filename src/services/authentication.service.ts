@@ -52,6 +52,12 @@ export class AuthenticationService {
     return this.auth.currentUser;
   }
 
+  logout(){
+    localStorage.removeItem('user');
+    this.router.navigate(['login']);
+    console.log('logged out');
+  }
+
 //   // Auth providers
 //   authLogin(provider) {
 //     return this.ngFireAuth.auth.signInWithPopup(provider)

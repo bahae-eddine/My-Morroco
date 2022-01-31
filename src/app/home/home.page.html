@@ -1,6 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title> Moroccan Trip </ion-title>
+
+    <ion-button (click)="logout()" slot="end" color="danger" size="small">Log Out.</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -8,8 +10,26 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>Welcome {{displayName}} To Morocco</ion-card-title>
-      <img src="../../assets/img/morroco.jpg" alt="morroco" srcset="" />
+      <ion-slides>
+        <ion-slide>
+          <img style="height: 200px;" src="../../assets/img/morroco2.jpg" alt="morroco" srcset="">
+        </ion-slide>
+        <ion-slide>
+          <img style="height: 200px;" src="../../assets/img/morroco.jpg" alt="morroco" srcset="">
+        </ion-slide>
+        <ion-slide>
+          <img style="height: 200px;" src="../../assets/img/morroco1.jpg" alt="morroco" srcset="">
+        </ion-slide>
+        <ion-slide>
+          <img style="height: 200px;" src="../../assets/img/morroco3.jpg" alt="morroco" srcset="">
+        </ion-slide>
+      </ion-slides>
+
     </ion-card-header>
+    <!-- <ion-card-header>
+      <ion-card-title>Welcome {{displayName}} To Morocco</ion-card-title>
+      <img src="../../assets/img/morroco.jpg" alt="morroco" srcset="" />
+    </ion-card-header> -->
 
     <ion-card-content>
       Keep close to Nature's heart... and break clear away, once in awhile, and
