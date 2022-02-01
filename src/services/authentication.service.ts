@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from 'firebase/auth';
 import { User } from '../models/user';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
@@ -24,9 +24,6 @@ export class AuthenticationService {
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
-      } else {
-        localStorage.setItem('user', null);
         JSON.parse(localStorage.getItem('user'));
       }
     });
@@ -53,10 +50,12 @@ export class AuthenticationService {
   }
 
   logout(){
-    localStorage.removeItem('user');
-    this.router.navigate(['login']);
-    console.log('logged out');
-  }
+    signOut(this.auth).then(() => {
+      localStorage.removeItem('user');
+      this.router.navigate(['login']);
+      console.log('logged out');
+    });
+    }
 
 //   // Auth providers
 //   authLogin(provider) {

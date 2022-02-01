@@ -30,10 +30,8 @@ export class HomePage implements OnInit{
       alert(err.message);
     });
   }
-  logout(){
-    localStorage.removeItem('user');
-    this.router.navigate(['login']);
-    console.log('logged out');
-  }
 
+  logout() {
+    this.authService.logout();
+  }
 }
